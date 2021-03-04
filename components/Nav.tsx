@@ -40,12 +40,13 @@ const Nav= () => {
             className={classes.navDisplayFlex}
           >
             {navLinks.map(({ title, path }) => (
-              // TODO: change anchor tag to Link from Gatsby or react router
-              <a href={path} key={title} className={classes.linkText}>
-                <ListItem button>
-                  <ListItemText primary={title} />
-                </ListItem>
-              </a>
+              <Link href={path} key={title}>
+                <a className={classes.linkText}>
+                  <ListItem button>
+                    <ListItemText primary={title} />
+                  </ListItem>
+                </a>
+              </Link>
             ))}
           </List>
         </Container>

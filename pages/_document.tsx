@@ -1,19 +1,15 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap" />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,700&display=swap"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
@@ -24,15 +20,16 @@ export default class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = async (ctx) => {
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
     originalRenderPage({
+      // useful for wrapping the whole react tree
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
-
+  // Run the parent `getInitialProps`, it now includes the custom `renderPage`
   const initialProps = await Document.getInitialProps(ctx);
 
   return {
@@ -41,3 +38,4 @@ MyDocument.getInitialProps = async (ctx) => {
   };
 };
 
+export default MyDocument

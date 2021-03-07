@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import theme from '../src/theme';
 import NavBar from '../components/Nav'
+import HeaderCard from '../components/HeaderCard'
 import Image from 'next/image'
 
 function index(){
@@ -29,13 +30,18 @@ function index(){
         <Layout />
         <h1>Welcome to Will Kencel's homesite and blog.</h1>
         <h2>...more coming soon!</h2>
-        <Image
-        src="/WillK.headshot_1.png"
-        alt="Will Kencel Headshot"
-        width={400}
-        height={400}
-      />
-        {/* <Component {...pageProps} /> */}
+          <div className="my-wrapper">
+            <Image
+            src="/WillK.headshot_1.png"
+            className="my-image"
+            alt="Will Kencel Headshot"
+            width={400}
+            height={400}
+            />
+          </div>
+        <h2>Engineer | Scientist | Explorer</h2>
+        <HeaderCard />
+          {/* <Component {...pageProps} /> */}
       </ThemeProvider>
     </Fragment>
   )

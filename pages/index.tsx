@@ -6,7 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import theme from '../src/theme';
 import NavBar from '../components/Nav'
-
+import Image from 'next/image'
 
 function index(){
 
@@ -27,7 +27,14 @@ function index(){
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Layout />
-        <h1>Welcome to my webpage</h1>
+        <h1>Welcome to Will Kencel's homesite and blog.</h1>
+        <h2>...more coming soon!</h2>
+        <Image
+        src="/WillK.headshot_1.png"
+        alt="Will Kencel Headshot"
+        width={400}
+        height={400}
+      />
         {/* <Component {...pageProps} /> */}
       </ThemeProvider>
     </Fragment>

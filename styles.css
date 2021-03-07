@@ -1,26 +1,7 @@
 body {
   font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
     'Arial', sans-serif;
-  padding: 20px 40px 60px;
-
+  padding: 20px 20px 60px;
+  max-width: 680px;
   margin: 0 auto;
-}
-
-
-#HeaderCard {
-  margin-left: 200px;
-  /* border-color: white;
-  border-width: 2em;
-  border-radius: 2em;
-  padding: 200px;
-  border-style: solid; */
-  border: 20px solid red;
-}
-
-.my-wrapper {
-  border-color: white;
-  border-width: .4em;
-  border-radius: 20em;
-  border-style: solid;
-  width: 400px;
 }

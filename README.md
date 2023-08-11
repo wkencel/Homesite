@@ -1,8 +1,6 @@
-# Homesite
-
-**edit: I ended up using Gatsby instead of Next.js but I wanted to leave this up because it is a nice template for anyone trying to build their site in Next.js**
+# Homesite Next.js - original version
 
 Hello fellow Engineer!
-This is my personal site built from some of my favorite technologies including Typescript, React, Next.js, express, Material-UI and more. Feel free to use any of the code for personal use.
+I have a gatsby repo up for my current site but I wanted to leave this one up as a template for anyone using next.js. It's built from some of my favorite technologies including Typescript, React, Next.js, express, Material-UI and more. Feel free to use any of the code for personal use.
 
 -Will K
